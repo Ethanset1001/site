@@ -1,142 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found - Redirecting</title>
-  <meta http-equiv="refresh" content="5;url=/" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #333;
-    }
-    
-    .container {
-      text-align: center;
-      background: white;
-      padding: 60px 40px;
-      border-radius: 10px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-      max-width: 500px;
-      width: 90%;
-    }
-    
-    h1 {
-      font-size: 72px;
-      font-weight: 700;
-      color: #667eea;
-      margin-bottom: 20px;
-    }
-    
-    h2 {
-      font-size: 24px;
-      color: #555;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-    
-    p {
-      font-size: 16px;
-      color: #777;
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-    
-    .redirect-info {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f5f5f5;
-      border-radius: 8px;
-      font-size: 14px;
-      color: #666;
-    }
-    
-    .home-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 30px;
-      background: #667eea;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    
-    .home-link:hover {
-      background: #764ba2;
-    }
-    
-    .spinner {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 3px solid #f3f3f3;
-      border-top: 3px solid #667eea;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-    
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
 </head>
 <body>
-  <div class="container">
-    <h1>404</h1>
-    <h2>Page Not Found</h2>
-    <p>Sorry, the page you're looking for doesn't exist or has been moved.</p>
-    
-    <div class="redirect-info">
-      <p>You will be automatically redirected to the home page <span class="spinner"></span></p>
-    </div>
-    
-    <p>If you're not automatically redirected:</p>
-    <a href="/" class="home-link">Return to Home</a>
-  </div>
-  
-  <script>
-    // Redirect logic for handling 404s
-    (function() {
-      var path = window.location.pathname;
-      var search = window.location.search;
-      
-      // If the path is not the root, redirect to home
-      // You can customize this behavior:
-      
-      // Option 1: Simple redirect to home (uncomment to use)
-      // window.location.replace('/');
-      
-      // Option 2: For SPAs - preserve the path as a hash for client-side routing
-      if (path !== '/' && path !== '') {
-        // Redirect to home with the original path preserved as a hash
-        window.location.replace('/#' + path + search);
-      }
-      
-      // Option 3: Custom redirect based on path patterns (uncomment and modify as needed)
-      // if (path.includes('code')) {
-      //   window.location.replace('/code');
-      // } else if (path.includes('docs')) {
-      //   window.location.replace('/docs');
-      // } else {
-      //   window.location.replace('/');
-      // }
-    })();
-  </script>
+    <h1>404 Not Found</h1>
+    <p>Sorry, the page you are looking for does not exist.</p>
+    <script>
+        // Set a delay of 5 seconds before redirecting
+        setTimeout(function() {
+            window.location.href = '/';
+        }, 5000);
+    </script>
 </body>
 </html>
