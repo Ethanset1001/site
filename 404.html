@@ -1,16 +1,14 @@
-<!doctype html>
+<!-- 404.html (put in repo root next to index.html) -->
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <title>redirecting...</title>
   <meta name="robots" content="noindex" />
   <script>
-    // take current path + query + hash and forward it into index.html as ?p=
-    // works on github pages because 404.html is served for unknown routes
     (function () {
+      // send unknown routes to index.html with original path in ?p=
       var p = location.pathname + location.search + location.hash
-      // keep your repo base path if you have one (project pages)
-      // for custom domain user pages, this is fine as-is
       location.replace('/?p=' + encodeURIComponent(p))
     })()
   </script>
