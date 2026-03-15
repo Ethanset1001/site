@@ -86,7 +86,7 @@ function handleSend() {
   setTimeout(() => {
     const response = findResponse(text);
     addMessage(response, false);
-  }, 300 + Math.random() * 400);
+  }, 2400 + Math.random() * 2000);
 }
 
 document.getElementById('send-btn').addEventListener('click', handleSend);
