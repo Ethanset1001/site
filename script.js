@@ -787,6 +787,13 @@ const fallbacks = [
   'sure',
   'nahhh',
   'NO',
+  'honestly i dont know',
+  'huh?',
+  'im confused tbf',
+  'what',
+  ';-;',
+  'si amigos',
+  'epstein',
 ];
 
 function findResponse(input, returnDebugInfo = false) {
@@ -795,7 +802,7 @@ function findResponse(input, returnDebugInfo = false) {
   let possibleResponses = [];
   
   // 20% chance to just say random slop
-  if (Math.random() < 0.2) {
+  if (Math.random() < 0.1) {
     const slopResponses = [
       'HEJAKAJEBEWKSOISKE',
       'jklfdsajklfdsjklfds',
