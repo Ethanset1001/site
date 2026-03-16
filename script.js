@@ -793,7 +793,6 @@ const fallbacks = [
   'what',
   ';-;',
   'si amigos',
-  'epstein',
 ];
 
 function findResponse(input, returnDebugInfo = false) {
