@@ -272,3 +272,8 @@ body {
     font-size: 10px;
   }
 }
+
+@font-face {
+  font-family: 'Porkys';
+  src: url('./PORKYS.TTF') format('truetype');
+}
