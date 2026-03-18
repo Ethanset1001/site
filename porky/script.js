@@ -9,7 +9,7 @@ const letterSpacing = document.getElementById('letterSpacing');
 let fontLoaded = false;
 
 // load font properly
-const fontFace = new FontFace('Porkys', 'url(/PORKYS.TTF)');
+const fontFace = new FontFace('Porkys', 'url(./PORKYS.TTF)');
 fontFace.load().then(f => {
   document.fonts.add(f);
   return document.fonts.ready;
