@@ -21,7 +21,7 @@ const color3Picker = document.getElementById('color3Picker');
 let font;
 
 // Load font
-const fontFace = new FontFace('Porkys', 'url(/PORKYS_[1].TTF)');
+const fontFace = new FontFace('Porkys', 'url(/PORKYS.TTF)');
 fontFace.load().then((loadedFont) => {
   document.fonts.add(loadedFont);
   font = loadedFont;
