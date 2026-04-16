@@ -20,23 +20,51 @@
             height: 100%;
             border: none;
         }
-        .websim-credit {
+        .credit-popup {
             position: fixed;
-            bottom: 10px;
-            left: 10px;
+            bottom: 15px;
+            right: 15px;
             z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 8px 12px;
-            border-radius: 4px;
+            background-color: #000;
+            padding: 12px 15px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 400px;
         }
-        .websim-credit a {
+        .credit-popup-text {
             color: #fff;
-            text-decoration: none;
             font-size: 14px;
             font-family: Arial, sans-serif;
+            line-height: 1.4;
         }
-        .websim-credit a:hover {
+        .credit-popup-text a {
+            color: #4a9eff;
+            text-decoration: none;
+        }
+        .credit-popup-text a:hover {
             text-decoration: underline;
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .close-btn:hover {
+            color: #ccc;
+        }
+        .credit-popup.hidden {
+            display: none;
         }
     </style>
 </head>
@@ -48,9 +76,21 @@
         allowfullscreen>
     </iframe>
 
-    <div class="websim-credit">
-        <a href="https://websim.com/@weeop/idkbro">This is a port of a Websim project</a>
+    <div class="credit-popup" id="creditPopup">
+        <div class="credit-popup-text">
+            uh i ported this project real site is <a href="https://websim.com/@weeop/idkbro" target="_blank">https://websim.com/@weeop/idkbro</a>
+        </div>
+        <button class="close-btn" onclick="document.getElementById('creditPopup').classList.add('hidden')">✕</button>
     </div>
+
+    <script>
+        // Optional: Close popup when Escape key is pressed
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.getElementById('creditPopup').classList.add('hidden');
+            }
+        });
+    </script>
 
 </body>
 </html>
